@@ -1,0 +1,18 @@
+{
+    "posts" : [
+        {
+            "id" : 1,
+            "auth_name" : "Humayun Kabir",
+            "auth_photo" : "",
+            "content": "",
+            "photo" : "",
+            "reactions" : {
+                "like" : 0,
+                "dislike" : 0,
+                "love" : 0
+
+            }
+
+        }
+    ]
+}

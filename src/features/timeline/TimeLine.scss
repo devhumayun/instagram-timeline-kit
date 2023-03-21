@@ -1,0 +1,144 @@
+.timeline-wraper {
+    margin-top: 50px;
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    .timeline-middle{
+        
+        .createPost {
+            width: 600px;
+            background-color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px 0px;
+            border-radius: 5px;
+            margin-bottom: 10px;
+            box-shadow: 0 .125rem .25rem rgba(0,0,0,.075)!important;
+            box-sizing: border-box;
+
+            button{
+                border: none;
+                padding: 10px 15px;
+                font-size: 16px;
+                letter-spacing: 1px;
+                border-radius: 5px;
+                background: #6eed6e;
+                color: #000;
+                font-weight: 600;
+                cursor: pointer;
+            }
+        }
+
+        .all-post{
+            .single-post-wraper{
+                width: 600px;
+                background-color: #fff;
+                display: flex;
+                flex-direction: column;
+                padding: 5px 0px;
+                border-radius: 5px;
+                margin-bottom: 10px;
+                box-shadow: 0 .125rem .25rem rgba(0,0,0,.075)!important;
+                box-sizing: border-box;
+                margin-bottom: 7px;
+                .author-box{
+                    display: flex;
+                    justify-content: space-between;
+                    padding: 0px 10px;
+                    .author-left{
+                        display: flex;
+                        align-items: center;
+                        gap: 8px;
+                        .author-post{
+                            img{
+                                width: 70px;
+                                height: 70px;
+                                border-radius: 50%;
+                                object-fit: cover;
+                            }
+                        }
+                        .author-info{
+                            h3{
+                                margin: 0;
+                                font-size: 16px;
+                                margin-bottom: 4px;
+                                cursor: pointer;
+                                &:hover {
+                                    text-decoration: underline;
+                                }
+                            }
+                            }
+                            span{}
+                        }
+                    }
+                    .author-right{
+                        span {
+                            display: inline-block;
+                            font-size: 38px;
+                            cursor: pointer;
+                        }
+                      }
+                    }
+                }
+                .content{
+                    padding: 0px 10px;
+                    p{
+
+                    }
+                }
+                .post-photo{
+                    img{
+                        width: 100%;
+                        height: auto;
+                    }
+                }
+                .reaction-box{
+                    display: flex;
+                    justify-content: space-between;
+                    padding: 10px 10px;
+                    .like{
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        gap: 5px;
+                        i{
+                            cursor: pointer;
+                            font-size: 25px;
+                        }
+                        span{
+                            ont-size: 16px;
+                        }
+                    }
+                    .dislike{
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        gap: 5px;
+                        i{
+                            cursor: pointer;
+                            font-size: 25px;
+                        }
+                        span{
+                            ont-size: 16px;
+                        }
+                    }
+                    .love{
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        gap: 5px;
+                        i{
+                            cursor: pointer;
+                            font-size: 25px;
+                        }
+                        span{
+                            ont-size: 16px;
+                        }
+                    }
+                }
+
+            }
+        }
+
