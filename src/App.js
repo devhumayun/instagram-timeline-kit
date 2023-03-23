@@ -1,10 +1,10 @@
 import React from 'react';
-import './App.css';
-import TimeLine from './features/timeline/TimeLine';
+import './App.css';import TimeLine from './features/timeline/TimeLine';
+;
 
 function App() {
   return <>
-    <TimeLine />
+   <TimeLine />
   </>
 }
 

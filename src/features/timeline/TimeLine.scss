@@ -18,6 +18,51 @@
             box-shadow: 0 .125rem .25rem rgba(0,0,0,.075)!important;
             box-sizing: border-box;
 
+            // post modal css
+            .create-post-wraper {
+                overflow: hidden;
+                .create-post-header{
+                    position: relative;
+                    display: flex;
+                    justify-content: center;
+                    padding: 15px 0px;
+                    border-bottom: 1px solid #ccc;
+                    span{
+                        display: inline-block;
+                        font-size: 20px;
+                        font-weight: 600;
+                    }
+                    .closeBtn{
+                        position: absolute;
+                        top: 18px;
+                        right: 16px;
+                        cursor: pointer;
+                    }
+                }
+                .post-form {
+                    display: flex;
+                    flex-direction: column;
+                    padding: 15px 0px;
+
+                    input{
+                        width: 90%;
+                        padding: 15px;
+                        margin: auto;
+                        border-radius: 5px;
+                        outline: none;
+                        border: 1px solid #ccc;
+                        margin-bottom: 7px;
+                    }
+
+                    button{
+                        width: 96%;
+                        margin: auto;
+                        padding: 15px;
+                        margin-top: 15px;
+                    }
+                }
+            }
+
             button{
                 border: none;
                 padding: 10px 15px;
@@ -139,6 +184,5 @@
                     }
                 }
 
-            }
-        }
+       }   }
 

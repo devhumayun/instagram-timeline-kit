@@ -1,18 +1,28 @@
 {
-    "posts" : [
-        {
-            "id" : 1,
-            "auth_name" : "Humayun Kabir",
-            "auth_photo" : "",
-            "content": "",
-            "photo" : "",
-            "reactions" : {
-                "like" : 0,
-                "dislike" : 0,
-                "love" : 0
-
-            }
-
-        }
-    ]
+  "posts": [
+    {
+      "id": 1,
+      "auth_name": "Humayun Kabir",
+      "auth_photo": "http://cdn.kalerkantho.com/public/news_images/2021/05/24/230838Kk-210524-5.jpg",
+      "content": "The Quick Brown Fox Jumps over the lazy Dog",
+      "photo": "http://cdn.kalerkantho.com/public/news_images/2021/05/24/230838Kk-210524-5.jpg",
+      "reactions": {
+        "like": 0,
+        "dislike": 0,
+        "love": 0
+      }
+    },
+    {
+      "id": 2,
+      "auth_name": "Kabir",
+      "auth_photo": "http://cdn.kalerkantho.com/public/news_images/2021/05/24/230838Kk-210524-5.jpg",
+      "content": "The Quick Brown Fox Jumps over the lazy Dog",
+      "photo": "http://cdn.kalerkantho.com/public/news_images/2021/05/24/230838Kk-210524-5.jpg",
+      "reactions": {
+        "like": 0,
+        "dislike": 0,
+        "love": 0
+      }
+    }
+  ]
 }
