@@ -1,12 +1,45 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Modal from "../../components/Modal/Modal";
 import "./TimeLine.scss";
 import { RxCross1 } from "react-icons/rx";
-
+import { useDispatch, useSelector } from "react-redux";
+import { createPost, fetchPosts } from "./timelineAPI";
 
 const TimeLine = () => {
-
   const [modal, setModal] = useState(false);
+  const dispatch = useDispatch()
+  // get posts
+  const posts = useSelector((state) => state.timeline.posts)
+  // state for input field
+  const [input, setInput] = useState({
+    auth_name : "",
+    auth_photo : "",
+    content : "",
+    photo : ""
+  })
+
+  const handleInputChange = (e) => {
+    setInput((prevState) => ({
+      ...prevState,
+      [e.target.name] : e.target.value
+    }))
+  }
+
+  const handlePostCreate = (e) => {
+    e.preventDefault()
+    setInput({
+      auth_name : "",
+      auth_photo : "",
+      content : "",
+      photo : ""
+    })
+    setModal(false)
+    dispatch(createPost(input))
+  }
+
+  useEffect(() => {
+    dispatch(fetchPosts())
+  },[dispatch])
   return (
     <div className="timeline-wraper">
       <div className="timeline-middle">
@@ -22,11 +55,11 @@ const TimeLine = () => {
                   </span>
                 </div>
                 <div className="post-form">
-                  <input type="text" placeholder="Name" />
-                  <input type="text" placeholder="Author Photo" />
-                  <input type="text" placeholder="Post Content" />
-                  <input type="text" placeholder="Post Photo" />
-                  <button type="submit"> Upload </button>
+                  <input name="auth_name" onChange={handleInputChange} type="text" placeholder="Name" />
+                  <input name="auth_photo" onChange={handleInputChange} type="text" placeholder="Author Photo" />
+                  <input name="content" onChange={handleInputChange} type="text" placeholder="Post Content" />
+                  <input name="photo" onChange={handleInputChange} type="text" placeholder="Post Photo" />
+                  <button onClick={handlePostCreate} type="submit"> Done </button>
                 </div>
               </div>
             </Modal>
@@ -34,17 +67,20 @@ const TimeLine = () => {
           <button onClick={() => setModal(!modal)}> Create Post </button>
         </div>
         <div className="all-post">
-              <div className="single-post-wraper">
+          {
+            posts.map(({auth_name, auth_photo, photo, content},index) => {
+              return(
+                <div className="single-post-wraper" key={index}>
                 <div className="author-box">
                   <div className="author-left">
                     <div className="author-post">
                       <img
-                        src="https://powerpackelements.com/wp-content/uploads/2017/11/Team-memeber-01.png"
+                        src={auth_photo}
                         alt=""
                       />
                     </div>
                     <div className="author-info">
-                      <h3> Humayun Kabir </h3>
+                      <h3> {auth_name} </h3>
                       <span> 12 min </span>
                     </div>
                   </div>
@@ -54,13 +90,12 @@ const TimeLine = () => {
                 </div>
                 <div className="content">
                   <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                    Tenetur explicabo quae ex odio dolores mollitia ratione.
+                    {content}
                   </p>
                 </div>
                 <div className="post-photo">
                   <img
-                    src="https://media.istockphoto.com/id/1268719270/photo/business-team-leader.jpg?b=1&s=170667a&w=0&k=20&c=xq7mq9TJeijN_yrqkVgiFgEN6ZkIOzTVFbTPF_IVJdM="
+                    src={photo}
                     alt=""
                   />
                 </div>
@@ -79,6 +114,10 @@ const TimeLine = () => {
                   </div>
                 </div>
               </div>
+              )
+            })
+          }
+            
         </div>
       </div>
     </div>
