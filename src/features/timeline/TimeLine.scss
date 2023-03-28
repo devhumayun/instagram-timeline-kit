@@ -124,6 +124,26 @@
                             font-size: 38px;
                             cursor: pointer;
                         }
+                        .action-button {
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: center;
+                            align-items: center;
+
+                            span {
+                                display: block;
+                                font-size: 20px !important;
+                                cursor: pointer;
+                                padding: 10px 0px;
+                                border-bottom: 1px solid #ccc;
+                                width: 100%;
+                                text-align: center;
+                                &:nth-child(3){
+                                    border-bottom: none;
+                                }
+                            }
+
+                        }
                       }
                     }
                 }

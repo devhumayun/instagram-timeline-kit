@@ -1,35 +1,17 @@
 {
   "posts": [
     {
-      "id": 1,
-      "auth_name": "Humayun Kabir",
-      "auth_photo": "http://cdn.kalerkantho.com/public/news_images/2021/05/24/230838Kk-210524-5.jpg",
-      "content": "The Quick Brown Fox Jumps over the lazy Dog",
+      "auth_name": "Mamun Islam",
+      "auth_photo": "https://powerpackelements.com/wp-content/uploads/2017/11/Team-memeber-01.png",
+      "content": "The Quick Brown Fox Jumps over the lazy dog",
       "photo": "http://cdn.kalerkantho.com/public/news_images/2021/05/24/230838Kk-210524-5.jpg",
+      "post_time": 1679984246006,
       "reactions": {
+        "love": 0,
         "like": 0,
-        "dislike": 0,
-        "love": 0
-      }
-    },
-    {
-      "id": 2,
-      "auth_name": "Kabir",
-      "auth_photo": "http://cdn.kalerkantho.com/public/news_images/2021/05/24/230838Kk-210524-5.jpg",
-      "content": "The Quick Brown Fox Jumps over the lazy Dog",
-      "photo": "http://cdn.kalerkantho.com/public/news_images/2021/05/24/230838Kk-210524-5.jpg",
-      "reactions": {
-        "like": 0,
-        "dislike": 0,
-        "love": 0
-      }
-    },
-    {
-      "auth_name": "Jack",
-      "auth_photo": "https://www.shutterstock.com/image-photo/smiling-african-american-office-employee-260nw-1032686038.jpg",
-      "content": "This is jacky time",
-      "photo": "https://www.shutterstock.com/image-photo/motivated-international-multiethnic-company-members-260nw-1375923107.jpg",
-      "id": 3
+        "dislike": 0
+      },
+      "id": 1
     }
   ]
 }
